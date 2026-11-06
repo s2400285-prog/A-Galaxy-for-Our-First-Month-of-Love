@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10051f">
+  <meta name="description" content="A universe made for Julie. Five worlds and one beautiful month of courtship, from James Neil Traigo.">
+  <title>BEYOND MY UNIVERSE</title>
+  <link rel="icon" href="assets/insignia.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/arrival.webp" as="image">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body data-scene="gate">
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-orbit" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="8.1" fill="none" stroke="currentColor" stroke-width="1.15"/>
+      <ellipse cx="16" cy="16" rx="14.1" ry="4.4" transform="rotate(-32 16 16)" fill="none" stroke="currentColor" stroke-width="1.15"/>
+      <circle cx="26" cy="6.6" r="1.65" fill="currentColor"/>
+      <path d="M16 11.8c.4 2.4 1.4 3.4 3.8 3.8-2.4.4-3.4 1.4-3.8 3.8-.4-2.4-1.4-3.4-3.8-3.8 2.4-.4 3.4-1.4 3.8-3.8Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="M12 0c.95 7.22 4.78 11.05 12 12-7.22.95-11.05 4.78-12 12C11.05 16.78 7.22 12.95 0 12 7.22 11.05 11.05 7.22 12 0Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path d="M12 21 3.5 12.8A5.4 5.4 0 0 1 12 6.2a5.4 5.4 0 0 1 8.5 6.6Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M21 12H4m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><path d="M7.5 10V7a4.5 4.5 0 0 1 9 0v3M6 10h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1Zm6 4v2" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 4.8a.8.8 0 0 1 1.2-.7l11 7.2a.8.8 0 0 1 0 1.4l-11 7.2a.8.8 0 0 1-1.2-.7Z" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 5h3v14H7zm7 0h3v14h-3z" fill="currentColor"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M5 5v14m7-14v14m7-14v14M3 9h4m3 6h4m3-7h4" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="heart-constellation" viewBox="0 0 240 200">
+      <path class="constellation-lines" d="M120 177 87 146 47 106 33 73 43 44 69 25 98 31 120 55 142 31 171 25 197 44 207 73 193 106 153 146 120 177M47 106l73-51 73 51m-106 40 33-91 33 91" fill="none" stroke="currentColor" stroke-width=".85"/>
+      <g fill="currentColor">
+        <circle cx="120" cy="177" r="3"/><circle cx="87" cy="146" r="2"/><circle cx="47" cy="106" r="2.5"/><circle cx="33" cy="73" r="2"/><circle cx="43" cy="44" r="2"/><circle cx="69" cy="25" r="3"/><circle cx="98" cy="31" r="1.8"/><circle cx="120" cy="55" r="3.6"/><circle cx="142" cy="31" r="1.8"/><circle cx="171" cy="25" r="3"/><circle cx="197" cy="44" r="2"/><circle cx="207" cy="73" r="2.1"/><circle cx="193" cy="106" r="2.5"/><circle cx="153" cy="146" r="2"/>
+      </g>
+      <use href="#i-star" x="111" y="46" width="18" height="18"/>
+      <use href="#i-star" x="64" y="20" width="10" height="10"/>
+      <use href="#i-star" x="166" y="20" width="10" height="10"/>
+    </symbol>
+  </svg>
+
+  <div class="cosmos" aria-hidden="true">
+    <div class="nebula"></div>
+    <canvas id="starfield"></canvas>
+    <div id="twinkles" class="twinkles"></div>
+    <div class="comet comet-one"></div>
+    <div class="comet comet-two"></div>
+    <div class="comet comet-three"></div>
+    <span class="drifting-heart heart-one">♡</span>
+    <span class="drifting-heart heart-two">♡</span>
+    <span class="drifting-heart heart-three">♡</span>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <div class="wordmark">
+        <span class="wordmark-icon"><svg aria-hidden="true"><use href="#i-orbit"/></svg></span>
+        <span>BEYOND MY<br><strong>UNIVERSE</strong></span>
+      </div>
+      <p class="edition" id="edition"><span class="signal-dot"></span> A LOVE STORY <span class="edition-divider"></span> VOL. 01</p>
+      <nav class="journey-nav" id="journey-nav" aria-label="Journey navigation" hidden>
+        <span class="sr-only" id="header-progress">0 of 5 planets explored.</span>
+        <div class="nav-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <button class="nav-map" type="button" data-go="map"><svg aria-hidden="true"><use href="#i-orbit"/></svg> Star map</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="universe">
+    <section class="scene gate" id="gate" aria-labelledby="gate-title">
+      <div class="gate-art" aria-hidden="true">
+        <div class="gate-image"></div>
+        <div class="gate-orbits"><i></i><i></i><i></i><b></b></div>
+        <svg class="gate-constellation constellation" viewBox="0 0 240 200"><use href="#heart-constellation"/></svg>
+        <div class="art-coordinate"><span class="coordinate-cross">+</span><span>FIG. 01<br>THE JULIE SYSTEM</span></div>
+        <div class="gate-asteroid asteroid-one"></div><div class="gate-asteroid asteroid-two"></div>
+      </div>
+      <div class="wrap gate-inner">
+        <div class="gate-copy">
+          <p class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg> A SECRET UNIVERSE</p>
+          <h1 id="gate-title">Beyond My <em>Universe</em></h1>
+          <p class="tagline">An entire universe, and somehow, my favorite world is you.</p>
+          <div class="gate-divider" aria-hidden="true"></div>
+          <p class="gate-welcome"><span class="sr-only">Welcome, my favorite person.</span><span id="welcome-typing" aria-hidden="true">Welcome, my favorite person.</span></p>
+          <p class="gate-description">Somewhere in this endless universe, I created a little world just for you.</p>
+          <p class="gate-question">Before you enter, I have one little question...</p>
+          <form id="gate-form" class="gate-form">
+            <label for="password">THE SECRET TO MY UNIVERSE</label>
+            <div class="gate-controls">
+              <div class="gate-field">
+                <svg aria-hidden="true"><use href="#i-lock"/></svg>
+                <input type="password" id="password" placeholder="Enter the secret to my universe..." autocomplete="off" autocapitalize="characters" spellcheck="false" required aria-describedby="password-error">
+              </div>
+              <button class="button button-primary" id="enter-button" type="submit">Enter my universe <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+            <p class="form-message" id="password-error" aria-live="polite"></p>
+          </form>
+          <noscript><p>Please turn on JavaScript to explore Julie’s universe.</p></noscript>
+        </div>
+      </div>
+      <div class="wrap gate-footer" aria-hidden="true"><span><b>01</b> / THE ARRIVAL</span><span class="gate-footer-line"></span><span>FROM JAMES, WITH LOVE</span></div>
+    </section>
+
+    <section class="scene map" id="map" aria-labelledby="map-title" hidden>
+      <div class="wrap scene-inner map-inner">
+        <div class="map-intro">
+          <p class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg> EXPLORE MY WORLD</p>
+          <h2 class="display" id="map-title" tabindex="-1">Hello, my baby <em>Julie.</em></h2>
+          <p>Tonight, I want you to explore a little universe that belongs to you. Every corner has something I want to tell you, every star carries a feeling, and every planet holds a little piece of my heart.</p>
+        </div>
+        <nav class="orbit-map" aria-label="Explore the five planets">
+          <svg class="map-tracks" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+            <ellipse cx="600" cy="210" rx="575" ry="132" transform="rotate(-9 600 210)"/>
+            <ellipse cx="600" cy="196" rx="552" ry="134" transform="rotate(9 600 196)"/>
+            <path d="M16 253C148 279 249 56 367 103s176 104 237 107 156-137 234-115 197 170 344 126"/>
+            <use href="#i-star" x="218" y="263" width="12" height="12"/>
+            <use href="#i-star" x="945" y="68" width="15" height="15"/>
+            <use href="#i-star" x="530" y="67" width="8" height="8"/>
+            <use href="#i-star" x="699" y="292" width="10" height="10"/>
+            <use href="#i-star" x="1026" y="295" width="9" height="9"/>
+          </svg>
+          <button type="button" class="planet-link planet-link-month" data-go="month" data-planet="month">
+            <span class="planet-art planet-rose" aria-hidden="true"><span class="planet-halo"></span><span class="planet-core"></span><span class="planet-moon"></span></span>
+            <span class="planet-label"><span class="planet-index">01 <span class="planet-status">· THE FIRST ORBIT</span></span><strong>Our First Month</strong></span>
+          </button>
+          <button type="button" class="planet-link planet-link-letter" data-go="letter" data-planet="letter">
+            <span class="planet-art planet-heart" aria-hidden="true"><span class="planet-halo"></span><span class="planet-core"></span><span class="planet-moon"></span></span>
+            <span class="planet-label"><span class="planet-index">02 <span class="planet-status">· SEALED WITH LOVE</span></span><strong>My Love Letter</strong></span>
+          </button>
+          <button type="button" class="planet-link planet-link-thanks" data-go="thanks" data-planet="thanks">
+            <span class="planet-art planet-lilac" aria-hidden="true"><span class="planet-halo"></span><span class="planet-core"></span><span class="planet-moon"></span></span>
+            <span class="planet-label"><span class="planet-index">03 <span class="planet-status">· A SKY OF GRATITUDE</span></span><strong>My Thank You Galaxy</strong></span>
+          </button>
+          <button type="button" class="planet-link planet-link-secrets" data-go="secrets" data-planet="secrets">
+            <span class="planet-art planet-violet" aria-hidden="true"><span class="planet-halo"></span><span class="planet-core"></span><span class="planet-moon"></span></span>
+            <span class="planet-label"><span class="planet-index">04 <span class="planet-status">· JUST BETWEEN US</span></span><strong>Our Little Secrets</strong></span>
+          </button>
+          <button type="button" class="planet-link planet-link-next" data-go="next" data-planet="next">
+            <span class="planet-art planet-ringed" aria-hidden="true"><span class="planet-halo"></span><span class="planet-core"></span><span class="planet-rings"></span><span class="planet-moon"></span></span>
+            <span class="planet-label"><span class="planet-index">05 <span class="planet-status">· A NEW HORIZON</span></span><strong>Two Months Ahead</strong></span>
+          </button>
+        </nav>
+        <div class="flight-log">
+          <div class="flight-progress">
+            <p class="eyebrow">FLIGHT LOG</p>
+            <div class="flight-count"><span id="flight-count" aria-live="polite">0 / 5 planets explored</span><progress id="flight-progress" value="0" max="5" aria-label="Planets explored">0 of 5</progress></div>
+          </div>
+          <p class="flight-hint" id="flight-hint">Explore the five planets to reach the edge of my universe.</p>
+          <button class="button button-outline ending-link" type="button" data-go="ending" disabled><svg aria-hidden="true"><use href="#i-lock"/></svg> Until we meet again <svg class="ending-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene chapter month" id="month" aria-labelledby="month-title" hidden>
+      <div class="wrap scene-inner chapter-inner">
+        <header class="chapter-heading">
+          <div>
+            <p class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg> PLANET 01 / OUR FIRST MONTH</p>
+            <h2 class="display" id="month-title" tabindex="-1">One Month,<br><em>A Thousand Feelings.</em></h2>
+            <p class="chapter-deck">The first orbit of a journey I hope we’ll keep taking together.</p>
+          </div>
+          <div class="heading-planet planet-art planet-rose" aria-hidden="true"><span class="planet-halo"></span><span class="planet-core"></span><span class="planet-moon"></span></div>
+        </header>
+        <div class="chapter-grid">
+          <article class="reading-surface prose" aria-label="My first-month letter">
+            <p class="letter-salutation">Baby Julie,</p>
+            <p>Can you believe that it has already been one month since I started courting you? One month might sound short to other people, but for me, it holds so many feelings, memories, happiness, and little moments that I will always treasure.</p>
+            <p>Every day that passes makes me realize how grateful I am that I get to know you more. I love discovering the little things about you, hearing your stories, spending time with you, and finding happiness in even the simplest moments we share.</p>
+            <p>Sometimes, I catch myself thinking about how lucky I am. I feel like we are already married in the way I care about you, the way I look forward to seeing you, and the way I imagine a future where I can continue choosing you every single day.</p>
+            <p>I know that I am still courting you, and I understand that love is something we continue to build with patience, honesty, faith, and understanding. But I want you to know that my intentions are sincere.</p>
+            <p>This first month is not the finish line. It is just the beginning of a beautiful journey that I hope we can continue together.</p>
+            <p>Thank you for allowing me to be part of your days, baby. I am so happy that I get to call you my favorite person.</p>
+          </article>
+          <aside class="timeline reveal" aria-labelledby="timeline-title">
+            <p class="eyebrow">OUR FIRST ORBIT</p>
+            <h3 id="timeline-title">Four little lights</h3>
+            <ol>
+              <li><svg aria-hidden="true"><use href="#i-star"/></svg><div><span>01 / THE BEGINNING</span><strong>I started courting you.</strong></div></li>
+              <li><svg aria-hidden="true"><use href="#i-star"/></svg><div><span>02 / GETTING TO KNOW YOU</span><strong>More stories and little things to love.</strong></div></li>
+              <li><svg aria-hidden="true"><use href="#i-star"/></svg><div><span>03 / THE LITTLE MOMENTS</span><strong>Finding happiness in the simplest things we share.</strong></div></li>
+              <li><svg aria-hidden="true"><use href="#i-star"/></svg><div><span>04 / OUR FIRST MONTH</span><strong>Grateful I get to keep choosing you.</strong></div></li>
+            </ol>
+          </aside>
+        </div>
+        <section class="photo-scene reveal" aria-labelledby="photo-title">
+          <div class="photo-heading">
+            <p class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg> ONE PICTURE OF US</p>
+            <h3 id="photo-title">A little corner<br>of <em>our universe.</em></h3>
+          </div>
+          <figure class="photo-frame">
+            <div class="photo-mat">
+              <div class="photo-placeholder" aria-hidden="true"><svg><use href="#i-orbit"/></svg><span>YOUR PHOTO GOES HERE</span></div>
+              <img id="our-photo" src="assets/julie-us.jpg" alt="The photo frame for James and Julie" width="1000" height="750" loading="lazy" decoding="async">
+              <svg class="frame-star frame-star-one" aria-hidden="true"><use href="#i-star"/></svg>
+              <svg class="frame-star frame-star-two" aria-hidden="true"><use href="#i-star"/></svg>
+              <svg class="frame-star frame-star-three" aria-hidden="true"><use href="#i-star"/></svg>
+            </div>
+            <figcaption>My favorite view in this entire universe.</figcaption>
+          </figure>
+        </section>
+        <div class="chapter-actions">
+          <button class="button button-outline" type="button" data-go="map"><svg aria-hidden="true"><use href="#i-back"/></svg> Back to star map</button>
+          <button class="button button-primary" type="button" data-continue><span>Next planet</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene chapter letter" id="letter" aria-labelledby="letter-title" hidden>
+      <div class="wrap scene-inner chapter-inner">
+        <header class="chapter-heading centered-heading">
+          <p class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg> PLANET 02 / MY LOVE LETTER</p>
+          <h2 class="display" id="letter-title" tabindex="-1">A Letter <em>from My Heart.</em></h2>
+          <p class="chapter-deck">For the person I’d find my way back to in every galaxy.</p>
+        </header>
+        <div class="letter-stage" id="letter-stage">
+          <div class="letter-orbit" aria-hidden="true"></div>
+          <svg class="letter-spark letter-spark-one" aria-hidden="true"><use href="#i-star"/></svg>
+          <svg class="letter-spark letter-spark-two" aria-hidden="true"><use href="#i-star"/></svg>
+          <div class="envelope" id="envelope" aria-hidden="true">
+            <div class="envelope-back"></div>
+            <div class="envelope-insert"><span>To my Julie</span><svg><use href="#i-star"/></svg></div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+            <span class="envelope-seal"><svg><use href="#i-heart"/></svg></span>
+          </div>
+          <button class="button button-primary" id="open-letter" type="button" aria-expanded="false" aria-controls="letter-sheet">Open my letter <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <span class="envelope-dedication" id="envelope-dedication">TO JULIE / FROM JAMES</span>
+        </div>
+        <article class="letter-sheet prose" id="letter-sheet" aria-labelledby="sheet-title" hidden>
+          <header class="sheet-header">
+            <h3 class="eyebrow" id="sheet-title" tabindex="-1"><svg aria-hidden="true"><use href="#i-star"/></svg> WRITTEN WITH LOVE</h3>
+            <button class="text-button" type="button" id="skip-typing" hidden>Show full letter</button>
+          </header>
+          <p class="letter-salutation" data-type><span class="typing-source">My dearest Julie,</span></p>
+          <p data-type><span class="typing-source">If I could travel across every galaxy, visit every planet, and explore every corner of the universe, I would still find myself coming back to you.</span></p>
+          <p data-type><span class="typing-source">You have become one of the most beautiful parts of my everyday life. I don't think you fully understand how much happiness you bring into my world. Even the smallest things you do can make my entire day better.</span></p>
+          <p data-type><span class="typing-source">I love how you make ordinary moments feel special. I love the time we spend together, the conversations we share, the laughter, the sweetness, and all the little things that make being with you so meaningful.</span></p>
+          <p data-type><span class="typing-source">Sometimes, I imagine what it would be like to wake up beside you every morning, prepare food together, laugh about silly things, go through difficult days, pray together, and build a home filled with love and understanding.</span></p>
+          <p data-type><span class="typing-source">I know that we are still in the courting stage, but my heart already dreams of those beautiful possibilities. I feel like I am already sharing a little piece of married life with you whenever we spend time together.</span></p>
+          <p data-type><span class="typing-source">I don't want to rush anything. I want to enjoy every stage with you. I want to earn your trust, make you feel appreciated, and show you through my actions that my love is genuine.</span></p>
+          <p data-type><span class="typing-source">If there is one thing I want you to remember, it is this: I am not only here for the beautiful days. I want to be someone who stays, understands, listens, supports, and chooses you even when life becomes difficult.</span></p>
+          <p data-type><span class="typing-source">I love you, Julie. More than these words can explain.</span></p>
+          <p data-type><span class="typing-source">And if the universe ever asks me where I want to belong, I will always point toward you.</span></p>
+          <p class="letter-signature" data-type><span class="typing-source">With all my love,&#10;James.</span></p>
+        </article>
+        <div class="chapter-actions">
+          <button class="button button-outline" type="button" data-go="map"><svg aria-hidden="true"><use href="#i-back"/></svg> Back to star map</button>
+          <button class="button button-primary" type="button" data-continue><span>Next planet</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene chapter thanks" id="thanks" aria-labelledby="thanks-title" hidden>
+      <div class="wrap scene-inner chapter-inner">
+        <header class="chapter-heading">
+          <div>
+            <p class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg> PLANET 03 / MY THANK YOU GALAXY</p>
+            <h2 class="display" id="thanks-title" tabindex="-1">Thank You for Making<br><em>My World Beautiful.</em></h2>
+            <p class="chapter-deck">There’s a thank-you tucked inside every star.</p>
+          </div>
+          <div class="heading-planet planet-art planet-lilac" aria-hidden="true"><span class="planet-halo"></span><span class="planet-core"></span><span class="planet-moon"></span></div>
+        </header>
+        <div class="chapter-grid thanks-grid">
+          <article class="reading-surface prose" aria-label="My appreciation letter">
+            <p class="letter-salutation">My baby,</p>
+            <p>I also want to take this opportunity to thank you for everything.</p>
+            <p>Thank you for your time, your kindness, your sweetness, your patience, and all the little and big things you have done for me.</p>
+            <p>Thank you for making me feel cared for. Thank you for the moments when you make me smile without even trying. Thank you for every conversation, every laugh, every hug, every moment together, and every memory that becomes something I can look back on with a happy heart.</p>
+            <p>Thank you for the things you have given me, the effort you make, and the love and consideration you show not only to me but also to the people important in my life.</p>
+            <p>I may not always know the perfect words to express how thankful I am, but please know that I never take your kindness for granted.</p>
+            <p>I want to reciprocate everything through my own efforts. I want to make you feel special, appreciated, protected, respected, and loved.</p>
+            <p>I pray that God continues to guide us, strengthen our connection, and teach us how to love each other in the right way.</p>
+            <p>You are one of the blessings I am genuinely thankful for.</p>
+            <p>Thank you for being you, Julie. I appreciate you more than you know.</p>
+          </article>
+          <aside class="gratitude reveal" aria-labelledby="gratitude-title">
+            <p class="eyebrow">FIVE LITTLE THANK-YOUS</p>
+            <h3 id="gratitude-title">A constellation of kindness</h3>
+            <div class="gratitude-sky">
+              <div class="gratitude-swirl" aria-hidden="true"></div>
+              <svg class="gratitude-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M22 26 66 19 84 51 59 76 19 69 22 26 59 76 66 19"/></svg>
+              <span class="handwritten-note note-one" aria-hidden="true">for your kindness</span>
+              <span class="handwritten-note note-two" aria-hidden="true">for your time</span>
+              <span class="handwritten-note note-three" aria-hidden="true">for being you</span>
+              <button class="gratitude-star" style="--x:22%;--y:26%;--delay:-.2s" type="button" data-thanks="0" aria-label="Thank you for your time" aria-controls="thank-note" aria-pressed="false"><svg aria-hidden="true"><use href="#i-star"/></svg></button>
+              <button class="gratitude-star" style="--x:66%;--y:19%;--delay:-1.4s" type="button" data-thanks="1" aria-label="Thank you for your kindness" aria-controls="thank-note" aria-pressed="false"><svg aria-hidden="true"><use href="#i-star"/></svg></button>
+              <button class="gratitude-star" style="--x:84%;--y:51%;--delay:-2s" type="button" data-thanks="2" aria-label="Thank you for the laughter" aria-controls="thank-note" aria-pressed="false"><svg aria-hidden="true"><use href="#i-star"/></svg></button>
+              <button class="gratitude-star" style="--x:59%;--y:76%;--delay:-.9s" type="button" data-thanks="3" aria-label="Thank you for your thoughtfulness" aria-controls="thank-note" aria-pressed="false"><svg aria-hidden="true"><use href="#i-star"/></svg></button>
+              <button class="gratitude-star" style="--x:19%;--y:69%;--delay:-2.9s" type="button" data-thanks="4" aria-label="Thank you for being you" aria-controls="thank-note" aria-pressed="false"><svg aria-hidden="true"><use href="#i-star"/></svg></button>
+            </div>
+            <p class="thank-note" id="thank-note" aria-live="polite">Touch any star to read its note.</p>
+          </aside>
+        </div>
+        <div class="chapter-actions">
+          <button class="button button-outline" type="button" data-go="map"><svg aria-hidden="true"><use href="#i-back"/></svg> Back to star map</button>
+          <button class="button button-primary" type="button" data-continue><span>Next planet</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene chapter secrets" id="secrets" aria-labelledby="secrets-title" hidden>
+      <div class="wrap scene-inner chapter-inner">
+        <header class="chapter-heading centered-heading">
+          <p class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg> PLANET 04 / THE SECRET CONSTELLATION</p>
+          <h2 class="display" id="secrets-title" tabindex="-1">Our Little <em>Secrets.</em></h2>
+          <p class="chapter-deck">Some things are written in the stars. These five are just for you.</p>
+        </header>
+        <div class="secret-vault" id="secret-vault">
+          <div class="secret-vault-header"><p class="eyebrow"><svg aria-hidden="true"><use href="#i-lock"/></svg> PRIVATE TRANSMISSIONS</p><p id="secret-progress" aria-live="polite">0 / 5 stars opened</p></div>
+          <ol class="secret-list">
+            <li><button class="secret-star" type="button" data-secret="0" aria-haspopup="dialog"><span class="secret-icon"><svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="secret-number">STAR 01</span><strong>A Little Confession</strong><span class="secret-state">Unopened</span></button></li>
+            <li><button class="secret-star" type="button" data-secret="1" aria-haspopup="dialog"><span class="secret-icon"><svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="secret-number">STAR 02</span><strong>My Favorite Dream</strong><span class="secret-state">Unopened</span></button></li>
+            <li><button class="secret-star" type="button" data-secret="2" aria-haspopup="dialog"><span class="secret-icon"><svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="secret-number">STAR 03</span><strong>When I Miss You</strong><span class="secret-state">Unopened</span></button></li>
+            <li><button class="secret-star" type="button" data-secret="3" aria-haspopup="dialog"><span class="secret-icon"><svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="secret-number">STAR 04</span><strong>A Promise</strong><span class="secret-state">Unopened</span></button></li>
+            <li><button class="secret-star" type="button" data-secret="4" aria-haspopup="dialog"><span class="secret-icon"><svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="secret-number">STAR 05</span><strong>The Biggest Secret</strong><span class="secret-state">Unopened</span></button></li>
+          </ol>
+          <div class="bonus-row"><p id="bonus-hint">One more little message is hidden in this constellation.</p><button class="button button-primary" id="bonus-secret" type="button" aria-haspopup="dialog" hidden><svg aria-hidden="true"><use href="#i-star"/></svg> One last secret</button></div>
+        </div>
+        <div class="chapter-actions">
+          <button class="button button-outline" type="button" data-go="map"><svg aria-hidden="true"><use href="#i-back"/></svg> Back to star map</button>
+          <button class="button button-primary" type="button" data-continue><span>Next planet</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene chapter next" id="next" aria-labelledby="next-title" hidden>
+      <div class="wrap scene-inner chapter-inner">
+        <header class="chapter-heading">
+          <div>
+            <p class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg> PLANET 05 / OUR NEXT GALAXY: TWO MONTHS AHEAD</p>
+            <h2 class="display" id="next-title" tabindex="-1">One Month Down,<br><em>Another Chapter to Go.</em></h2>
+            <p class="chapter-deck">A little look toward our next orbit.</p>
+          </div>
+        </header>
+        <div class="chapter-grid next-grid">
+          <article class="reading-surface prose" aria-label="My letter for the next chapter">
+            <p class="letter-salutation">Baby Julie,</p>
+            <p>As we look forward to another month of courting, I want you to know that I am still here, with the same sincere intentions and an even more grateful heart.</p>
+            <p>I don't know everything that the future holds, but I know that I want to keep making beautiful memories with you.</p>
+            <p>I want another month of laughter, dates, conversations, surprises, prayers, and moments that remind us why getting to know each other is worth it.</p>
+            <p>I will continue courting you, appreciating you, and showing you that you are someone worth making an effort for.</p>
+            <p>I hope that when we reach our second month, we will have even more stories to tell, more reasons to smile, and more memories to treasure.</p>
+            <p>No pressure, no rushing, just genuine love and a heart that sincerely wants to choose you.</p>
+            <p>Thank you for this first month, my baby.</p>
+            <p>And here's to the next chapter of us.</p>
+          </article>
+          <aside class="next-orbit reveal" aria-label="Next chapter milestone">
+            <button class="milestone" id="milestone" type="button" aria-label="Next chapter: Month 02" aria-expanded="false" aria-controls="milestone-note">
+              <span class="milestone-planet planet-art planet-ringed" aria-hidden="true"><span class="planet-halo"></span><span class="planet-core"></span><span class="planet-rings"></span><span class="planet-moon"></span></span>
+              <span class="eyebrow">NEXT CHAPTER: MONTH</span>
+              <span class="milestone-digits"><span>0</span><span>2</span></span>
+              <span class="milestone-cue" id="milestone-cue">Touch to light up the next orbit <svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            </button>
+            <p class="milestone-note" id="milestone-note" hidden>Here’s to more time to know you and more little moments to look forward to.</p>
+          </aside>
+        </div>
+        <div class="chapter-actions">
+          <button class="button button-outline" type="button" data-go="map"><svg aria-hidden="true"><use href="#i-back"/></svg> Back to star map</button>
+          <button class="button button-primary" type="button" data-continue><span>Next planet</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene ending" id="ending" aria-labelledby="ending-title" hidden>
+      <div class="ending-sky" aria-hidden="true">
+        <div class="ending-galaxy"></div>
+        <div class="comet comet-one"></div><div class="comet comet-two"></div>
+        <span class="drifting-heart heart-one">♡</span><span class="drifting-heart heart-two">♡</span>
+        <svg class="ending-constellation constellation" viewBox="0 0 240 200"><use href="#heart-constellation"/></svg>
+        <div class="ending-planet ending-planet-one planet-art planet-rose"><span class="planet-halo"></span><span class="planet-core"></span></div>
+        <div class="ending-planet ending-planet-two planet-art planet-ringed"><span class="planet-halo"></span><span class="planet-core"></span><span class="planet-rings"></span></div>
+      </div>
+      <div class="wrap scene-inner ending-inner">
+        <h2 class="eyebrow" id="ending-title" tabindex="-1"><svg aria-hidden="true"><use href="#i-star"/></svg> UNTIL WE MEET AGAIN</h2>
+        <div class="closing-lines" id="closing-lines" aria-live="polite">
+          <p hidden>You have reached the edge of my universe...</p>
+          <p hidden>But not the end of my love.</p>
+          <p hidden>Thank you for exploring my little world, baby.</p>
+          <p hidden>Thank you for one beautiful month of being someone I get to court.</p>
+          <p hidden>I hope you felt even a little of the love I tried to put into every star, every letter, and every corner of this universe.</p>
+        </div>
+        <div class="closing-message" id="closing-message" hidden>
+          <h3 class="display" id="final-title" tabindex="-1">See You After 2 Months of Courting, <em>My Baby Julie.</em></h3>
+          <p>Until then, I will keep loving you, appreciating you, praying for you, and making every effort to show you how special you are.</p>
+          <p>Remember, you are my favorite universe.</p>
+          <blockquote>Julie, I may not own the entire universe, but I want to spend my life making a beautiful world with you.</blockquote>
+          <p class="final-signature">With endless love,<br><strong>James Neil Traigo.</strong></p>
+          <button class="button button-primary" type="button" data-go="map">Return to my universe <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="secret-dialog" id="secret-dialog" aria-labelledby="secret-dialog-title" aria-describedby="secret-dialog-message">
+    <div class="dialog-inner">
+      <svg class="dialog-star" aria-hidden="true"><use href="#i-star"/></svg>
+      <p class="eyebrow" id="secret-dialog-index"></p>
+      <h2 id="secret-dialog-title"></h2>
+      <p id="secret-dialog-message"></p>
+      <form method="dialog"><button class="button button-outline" type="submit" autofocus>Back to the stars</button></form>
+    </div>
+  </dialog>
+
+  <div class="warp" id="warp" hidden>
+    <div class="warp-orbit" aria-hidden="true"><i></i><i></i><i></i><svg><use href="#i-star"/></svg></div>
+    <div class="warp-caption">
+      <p class="eyebrow" id="warp-title" tabindex="-1">OPENING JULIE’S UNIVERSE</p>
+      <p id="warp-message" aria-live="polite"></p>
+      <div class="warp-progress" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+  <div class="jump" id="jump" aria-hidden="true"></div>
+  <div class="spark-bursts" id="spark-bursts" aria-hidden="true"></div>
+
+  <aside class="music-player" id="music-player" aria-label="Music player">
+    <div class="music-bar">
+      <button class="play-button" id="play-button" type="button" aria-label="Play music"><span class="record" aria-hidden="true"></span><svg aria-hidden="true"><use id="play-icon" href="#i-play"/></svg></button>
+      <div class="music-info"><p>A Song for My Julie.</p><span id="music-status" aria-live="polite">THE SOUNDTRACK</span></div>
+      <button class="music-settings" id="music-settings" type="button" aria-label="Music controls" aria-expanded="false" aria-controls="music-controls"><svg aria-hidden="true"><use href="#i-sliders"/></svg></button>
+    </div>
+    <div class="music-controls" id="music-controls" hidden>
+      <label for="seek">Playback progress</label>
+      <input type="range" id="seek" min="0" max="100" step="0.1" value="0" disabled>
+      <div class="music-times"><span id="current-time">0:00</span><span id="duration">0:00</span></div>
+      <div class="volume-control"><label for="volume">Volume</label><input type="range" id="volume" min="0" max="1" step="0.01" value="0.55"></div>
+    </div>
+    <audio id="soundtrack" data-src="assets/music.mp3" preload="none" loop></audio>
+  </aside>
+</body>
+</html>
